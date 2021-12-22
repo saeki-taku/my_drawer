@@ -1,0 +1,66 @@
+@use '../../Foundation/color' as c;
+@use '../../Foundation/mixin' as m;
+
+// 今回はプレフィックスはなしでクラス名を当てていく
+// ファイル分割は使用するので少し不便？？
+
+.homeHero {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.homeHero__photo {
+  width: 100%;
+  height: calc(100% - 60px);
+  color: c.$base_black;
+  z-index: -2000;
+}
+
+.homeHero__logo {
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+
+.homeHero__tate {
+  position: absolute;
+
+  &.top {
+    top: 40px;
+    right: 40px;
+  }
+
+  &.bottom {
+    top: 120px;
+    right: 160px;
+  }
+}
+
+.homeHero__blog {
+  display: flex;
+  // height: 60px;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+.c-btn-01 {
+  &.homeHero__blogNew {
+    width: auto;
+    flex-grow: 2;
+  }
+
+  &.homeHero__blogAll {
+    width: auto;
+    flex-basis: 200px;
+  }
+}
+
+.homeHero__blogDate {
+  margin-right: 10px;
+  @include m.font_size_rem(14);
+}

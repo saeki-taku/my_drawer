@@ -1,0 +1,19 @@
+{
+    "parser": "babel-eslint",
+    "extends": "airbnb-base",
+    "rules": {
+        "no-undef": 0,
+        "no-restricted-syntax": 0,
+        "comma-dangle": 0,
+        "object-curly-newline": 0,
+        "prefer-const": 1,
+        "prefer-destructuring": 1
+    },
+    "globals": {
+        "$": false
+    },
+    "env": {
+        "jquery": true,
+        "browser": true
+    }
+}

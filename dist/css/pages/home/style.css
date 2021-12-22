@@ -1,0 +1,94 @@
+.homeHero {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+
+.homeHero__photo {
+  width: 100%;
+  height: calc(100% - 60px);
+  color: #000000;
+  z-index: -2000;
+}
+
+.homeHero__logo {
+  position: absolute;
+  top: 20px;
+  left: 0;
+}
+
+.homeHero__tate {
+  position: absolute;
+}
+
+.homeHero__tate.top {
+  top: 40px;
+  right: 40px;
+}
+
+.homeHero__tate.bottom {
+  top: 120px;
+  right: 160px;
+}
+
+.homeHero__blog {
+  display: flex;
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+.c-btn-01.homeHero__blogNew {
+  width: auto;
+  flex-grow: 2;
+}
+
+.c-btn-01.homeHero__blogAll {
+  width: auto;
+  flex-basis: 200px;
+}
+
+.homeHero__blogDate {
+  margin-right: 10px;
+  font-size: 0.875rem;
+}
+
+.mb_xs {
+  margin-bottom: 10px !important;
+}
+
+.mb_sm {
+  margin-bottom: 20px !important;
+}
+
+.mb_md {
+  margin-bottom: 30px !important;
+}
+
+.mb_lg {
+  margin-bottom: 40px !important;
+}
+
+.mb_xl {
+  margin-bottom: 80px !important;
+}
+
+.mb_xxl {
+  margin-bottom: 100px !important;
+}
+
+.title {
+  color: green;
+  font-size: 1.25rem;
+}
+
+@media screen and (min-width: 768px) {
+  .title {
+    background-color: #cacaca;
+    color: blue;
+  }
+}
+/*# sourceMappingURL=style.css.map */

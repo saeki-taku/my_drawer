@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% let meta = { title: 'サブページ', page: 'home'}; %> <%- include('./include/_head',{ head: meta }); %>
+  </head>
+  <style>
+    body {
+      padding: 40px;
+    }
+
+    .mb {
+      margin-bottom: 30px;
+    }
+  </style>
+  <body>
+    <div class="wrapper">
+      <!-- INCLUDE__HEADER -->
+      <%- include('./include/_header'); %>
+
+      <main>
+        <div class="mb">
+          <h3>引出しボタンデザイン</h3>
+          <p>パターン1</p>
+          <a class="c-btn c-btn-01" href="">
+            <div class="c-btn-01__box">
+              <div class="c-btn-01__inner">HTML</div>
+            </div>
+          </a>
+        </div>
+
+        <div class="mb">
+          <p>パターン2</p>
+          <a class="c-btn c-btn-02" href="">
+            <div class="c-btn__inner c-btn-02__inner">Vue.js</div>
+          </a>
+        </div>
+
+        <div class="mb">
+          <p>パターン3</p>
+          <a class="c-btn c-btn_03" href="">o-dan</a>
+        </div>
+
+        <div class="mb">
+          <h3>引出しデザイン(タイトル)</h3>
+          <p>パターン1</p>
+          <h2 class="c-title__wrap">
+            <span class="c-title">カテゴリーから引き出す</span>
+            <div class="c-title__square">
+              <div class="c-title__square-inner"></div>
+            </div>
+          </h2>
+        </div>
+
+        <div class="">
+          <h2>ラインテスト</h2>
+          <div class="c-line">
+            <div class="c-line-inner"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- INCLUDE__FOOTER -->
+    <%- include('./include/_footer'); %>
+    <!-- INCLUDE__FOOT -->
+    <%- include('./include/_foot'); %>
+  </body>
+</html>

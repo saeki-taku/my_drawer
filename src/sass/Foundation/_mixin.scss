@@ -1,0 +1,52 @@
+@use "sass:map";
+@use "sass:math";
+
+//メディアクエリ
+$breakpoint: (
+  xs: 'screen and (max-width: 360px)',
+  sm: 'screen and (min-width: 576px)',
+  md: 'screen and (min-width: 768px)',
+  lg: 'screen and (min-width: 1000px)',
+  xl: 'screen and (min-width: 1200px)',
+  xxl: 'screen and (min-width: 1400px)'
+);
+
+@mixin mq($bp) {
+  @media #{map.get($breakpoint, $bp)} {
+   @content;
+  }
+}
+
+//フォントサイズ
+// rem
+@mixin font_size_rem($size) {
+  font-size: math.div($size,16) + rem;
+}
+// vw
+@function get_vw($size, $viewport: 375){
+  $rate: math.div(100,$viewport);
+  @return $rate * $size * 1vw;
+}
+
+@mixin font_size_vw($font_size: 10){
+  font-size: get_vw($font_size);
+}
+
+// 中央寄せ
+@mixin center($direction) {
+  position: absolute;
+
+  @if $direction == xy {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  @else if $direction == x {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @else if $direction == y {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

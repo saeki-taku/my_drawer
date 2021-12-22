@@ -1,0 +1,25 @@
+{
+  "data": {
+    "header": {
+      "title": "headerのtitleです",
+      "text": "headerに組み込むテキストです。"
+    },
+    "main": {
+      "title": "mainのtitleです",
+      "text": "mainに組み込むテキストです。"
+    },
+    "inner": [
+      {
+        "title": "例１：CSS(文字色)",
+        "text": "CSSでタイトルの文字色変更など"
+      },
+      {
+        "title": "例２：JS(文字列)",
+        "text": "JSでテキストの文字列追加[<span class='inner-test>仮<span>]"
+      }
+    ],
+    "footer": {
+      "text": "copyright &copy; ennui"
+    }
+  }
+}

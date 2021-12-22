@@ -1,0 +1,13 @@
+@use '../../Foundation/color' as c;
+@use '../../Foundation/mixin' as m;
+@use '../../Utility/margin' as u;
+
+.title {
+  color: c.$base_green;
+  @include m.font_size_rem(20);
+
+  @include m.mq(md) {
+    background-color: #cacaca;
+    color: c.$base_blue;;
+  }
+}
