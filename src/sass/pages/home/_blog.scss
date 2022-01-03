@@ -1,0 +1,45 @@
+@use '../../Foundation/color' as c;
+@use '../../Foundation/mixin' as m;
+
+.homeBlog {
+  // display: flex;
+  // height: 60px;
+  // max-width: 1400px;
+  // width: 100%;
+  // margin: 0 auto;
+}
+
+.homeBlog__wrap {
+  display: flex;
+  flex-direction: column;
+  @include m.mq(sm) {
+    flex-direction: row;
+  }
+}
+
+.homeBlog__new {
+  &.c-btn-01 {
+    width: auto;
+    flex-grow: 2;
+  }
+
+  @include m.mq(sm) {
+  }
+}
+
+.c-btn-01 {
+  &.homeBlog__new {
+    width: auto;
+    flex-grow: 2;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
+    // white-space: nowrap;
+    @include m.mq(sm) {
+    }
+  }
+}
+
+.homeBlog__date {
+  margin-right: 10px;
+  @include m.font_size_rem(14);
+}

@@ -1,0 +1,17 @@
+@use '../../Foundation/color' as c;
+@use '../../Foundation/mixin' as m;
+
+.recommend {
+  // position: relative;
+
+  // &::before {
+  //   content: '';
+  //   display: block;
+  //   width: calc(100% + 20px);
+  //   height: 1px;
+  //   box-shadow: 0 1px 1px c.$base_black;
+  //   background-color: c.$base_black;
+  //   @include m.center(x);
+  //   top: -9px;
+  // }
+}

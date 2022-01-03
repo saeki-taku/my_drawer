@@ -7,36 +7,249 @@
     <div class="wrapper">
       <!-- INCLUDE__HEADER -->
       <%- include('./include/_header'); %>
-      <div class="homeHero">
+      <!-- <div class="homeHero">
         <img class="homeHero__photo" src="./images/top_01_1920.jpg" alt="トップの棚の画像" />
         <h1 class="homeHero__logo">ここにロゴ画像が入る予定</h1>
-        <img class="homeHero__tate top" src="./images/tategaki_top_03.png" alt="" width="75px" height="auto" />
-        <img class="homeHero__tate bottom" src="./images/tategaki_bottom_03.png" alt="" width="75px" height="auto" />
-        <div class="homeHero__blog">
-          <!-- <a class="homeHero__blogNew" href="">
-            最新のブログがここに入る
-          </a> -->
-
-          <a class="homeHero__blogNew c-btn c-btn-01" href="">
-            <div class="c-btn-01__box">
-              <div class="c-btn-01__inner">
-                <span class="homeHero__blogDate">22.01.01</span>今年からReactを学んでいく話
-              </div>
-            </div>
-          </a>
-
-          <a class="c-btn c-btn-01" href="">
-            <div class="c-btn-01__box">
-              <div class="c-btn-01__inner">
-                ブログ一覧
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
+        <img class="homeHero__tate top" src="./images/tategaki_top_03.png" alt="" width="60px" height="auto" />
+        <img class="homeHero__tate bottom" src="./images/tategaki_bottom_03.png" alt="" width="60px" height="auto" />
+      </div> -->
 
       <main class="l-main">
-        <div class="p-container"></div>
+        <div class="l-main__frame">
+          <!-- BLOG-->
+          <section class="c-section homeBlog">
+            <!--
+            <a class="homeBlog__new c-btn c-btn-01" href="">
+              <div class="c-btn-01__box">
+                <div class="c-btn__inner c-btn-01__inner"><span class="homeBlog__date">22.01.01</span>今年からReactを学んでいく話</div>
+              </div>
+            </a> -->
+
+            <a class="c-btn c-btn-01" href="">
+              <div class="c-btn-01__box">
+                <div class="c-btn-01__inner"></div>
+              </div>
+              <span class="c-btn-01__text"><span class="homeBlog__date">22.01.01</span>今年からReactを学んでいく話</span>
+            </a>
+            <!-- 下部カテゴリーにブログがあるため不要 -->
+          </section>
+          <!-- CATEGORY_SECTION -->
+          <section class="c-section homeCategory">
+            <h2 class="c-title__wrap js-open">
+              <!-- js-openが付いたらアニメショーンするように！(テスト環境中は付与) -->
+              <!-- <span class="c-title">カテゴリーから引き出す</span> -->
+              <span class="c-title">
+                <img src="../images/title_category.png" alt="" width="210px" height="auto">
+              </span>
+              <span class="c-title__line"></span>
+              <span class="c-title__square">
+                <span class="c-title__square-inner">
+                  <span class="c-title__circle"></span>
+                </span>
+              </span>
+            </h2>
+            <div class="c-container homeCategory">
+              <ul class="c-btn-01__list homeCategory_list main">
+                <li class="c-btn-01__item">
+                  <a class="c-btn c-btn-01" href="">
+                    <div class="c-btn-01__box">
+                      <div class="c-btn-01__inner"></div>
+                    </div>
+                    <span class="c-btn-01__text">HTML</span>
+                  </a>
+                </li>
+                <li class="c-btn-01__item">
+                  <a class="c-btn c-btn-01" href="">
+                    <div class="c-btn-01__box">
+                      <div class="c-btn-01__inner"></div>
+                    </div>
+                    <span class="c-btn-01__text">CSS</span>
+                  </a>
+                </li>
+                <li class="c-btn-01__item">
+                  <a class="c-btn c-btn-01" href="">
+                    <div class="c-btn-01__box">
+                      <div class="c-btn-01__inner"></div>
+                    </div>
+                    <span class="c-btn-01__text">Javascript</span>
+                  </a>
+                </li>
+                <li class="c-btn-01__item">
+                  <a class="c-btn c-btn-01" href="">
+                    <div class="c-btn-01__box">
+                      <div class="c-btn-01__inner"></div>
+                    </div>
+                    <span class="c-btn-01__text">部品</span>
+                  </a>
+                </li>
+                <li class="c-btn-01__item plugin">
+                  <a class="c-btn c-btn-01" href="">
+                    <div class="c-btn-01__box">
+                      <div class="c-btn-01__inner"></div>
+                    </div>
+                    <span class="c-btn-01__text">プラグイン・フレームワーク</span>
+                  </a>
+                </li>
+                <li class="c-btn-01__item Preparation">
+                  <a class="c-btn c-btn-01" href="">
+                    <div class="c-btn-01__box">
+                      <div class="c-btn-01__inner">
+                        <!-- 準備中 -->
+                      </div>
+                    </div>
+                    <!-- <span  class="c-btn-01__text">準備中</span> -->
+                  </a>
+                </li>
+              </ul>
+              <!-- ツールボックス・ブログ -->
+              <ul class="c-btn-01__list homeCategory_list sub">
+                <li class="c-btn-01__item">
+                  <a class="c-btn c-btn-01" href="">
+                    <div class="c-btn-01__box">
+                      <div class="c-btn-01__inner"></div>
+                    </div>
+                    <span class="c-btn-01__text">ツールボックス</span>
+                  </a>
+                </li>
+                <li class="c-btn-01__item">
+                  <a class="c-btn c-btn-01" href="">
+                    <div class="c-btn-01__box">
+                      <div class="c-btn-01__inner"></div>
+                    </div>
+                    <span class="c-btn-01__text">ブログ</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!-- RECOMMEND_SECTION -->
+          <section class="c-section homeRecommend">
+            <h2 class="c-title__wrap js-open">
+              <!-- js-openが付いたらアニメショーンするように！(テスト環境中は付与) -->
+              <!-- <span class="c-title">よく使うもの</span> -->
+              <span class="c-title">
+                <img src="../images/title_recommend.png" alt="" width="120px" height="auto">
+              </span>
+              <span class="c-title__line"></span>
+              <span class="c-title__square">
+                <span class="c-title__square-inner">
+                  <span class="c-title__circle"></span>
+                </span>
+              </span>
+            </h2>
+            <div class="c-container homeRecommend">
+              <ul class="c-btn-03__list recommend">
+                <li class="c-btn-03__item">
+                  <a class="c-btn c-btn-03" href="">
+                    <div class="c-btn-03__box"></div>
+                    <span class="c-btn-03__text up">HTML</span>
+                  </a>
+                </li>
+                <li class="c-btn-03__item">
+                  <a class="c-btn c-btn-03" href="">
+                    <div class="c-btn-03__box"></div>
+                    <span class="c-btn-03__text up">HTML</span>
+                  </a>
+                </li>
+                <li class="c-btn-03__item">
+                  <a class="c-btn c-btn-03" href="">
+                    <div class="c-btn-03__box"></div>
+                    <span class="c-btn-03__text up">HTML</span>
+                  </a>
+                </li>
+                <li class="c-btn-03__item">
+                  <a class="c-btn c-btn-03" href="">
+                    <div class="c-btn-03__box"></div>
+                    <span class="c-btn-03__text up">HTML</span>
+                  </a>
+                </li>
+                <li class="c-btn-03__item">
+                  <a class="c-btn c-btn-03" href="">
+                    <div class="c-btn-03__box"></div>
+                    <span class="c-btn-03__text up">HTML</span>
+                  </a>
+                </li>
+                <li class="c-btn-03__item">
+                  <a class="c-btn c-btn-03" href="">
+                    <div class="c-btn-03__box"></div>
+                    <span class="c-btn-03__text up">HTML</span>
+                  </a>
+                </li>
+                <li class="c-btn-03__item">
+                  <a class="c-btn c-btn-03" href="">
+                    <div class="c-btn-03__box"></div>
+                    <span class="c-btn-03__text up">HTML</span>
+                  </a>
+                </li>
+                <li class="c-btn-03__item">
+                  <a class="c-btn c-btn-03" href="">
+                    <div class="c-btn-03__box"></div>
+                    <span class="c-btn-03__text up">HTML</span>
+                  </a>
+                </li>
+                <li class="c-btn-03__item">
+                  <a class="c-btn c-btn-03" href="">
+                    <div class="c-btn-03__box"></div>
+                    <span class="c-btn-03__text up">HTML</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- TAG_SECTION -->
+          <section class="c-section homeTag">
+            <h2 class="c-title__wrap js-open">
+              <!-- js-openが付いたらアニメショーンするように！(テスト環境中は付与) -->
+              <!-- <span class="c-title">タグから引き出す</span> -->
+              <span class="c-title">
+                <img src="../images/title_tag.png" alt="" width="170px" height="auto">
+              </span>
+              <span class="c-title__line"></span>
+              <span class="c-title__square">
+                <span class="c-title__square-inner">
+                  <span class="c-title__circle"></span>
+                </span>
+              </span>
+            </h2>
+
+            <div class="c-container">
+              <ul class="c-btn-02__list">
+                <li class="c-btn-02__item mb_10">
+                  <a class="c-btn c-btn-02" href="">
+                    <div class="c-btn__inner c-btn-02__box">Vue</div>
+                  </a>
+                </li>
+                <li class="c-btn-02__item mb_10">
+                  <a class="c-btn c-btn-02" href="">
+                    <div class="c-btn__inner c-btn-02__box">React</div>
+                  </a>
+                </li>
+                <li class="c-btn-02__item mb_10">
+                  <a class="c-btn c-btn-02" href="">
+                    <div class="c-btn__inner c-btn-02__box">Next.js</div>
+                  </a>
+                </li>
+                <li class="c-btn-02__item mb_10">
+                  <a class="c-btn c-btn-02" href="">
+                    <div class="c-btn__inner c-btn-02__box">Gatsby</div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </section>
+          <!-- EXPLANATION_SECTION -->
+          <section class="c-section c-explanation">
+            <div class="c-container">
+              <a class="c-btn c-btn-01" href="">
+                <div class="c-btn-01__box">
+                  <div class="c-btn-01__inner"></div>
+                </div>
+                <span class="c-btn-01__text">このサイトについて</span>
+              </a>
+            </div>
+          </section>
+        </div>
       </main>
 
       <!-- INCLUDE__FOOTER -->

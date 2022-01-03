@@ -1,4 +1,25 @@
+@use '../Foundation/color' as c;
+@use '../Foundation/mixin' as m;
+
 .l-main {
   max-width: 1400px;
-  margin: 0 auto;
+  width: 100%;
+  margin: 2px auto;
+  padding: 15px 10px;
+  border: 2px solid;
+  border-radius: 4px;
+  @include m.mq(md) {
+    padding: 30px;
+    // background: c.$back_wood;
+  }
+}
+
+.l-main__frame {
+  @include m.mq(md) {
+    border: 2px solid;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: white;
+    // background: c.$back_wood_thin;
+  }
 }

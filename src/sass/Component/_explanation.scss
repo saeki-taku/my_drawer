@@ -1,0 +1,14 @@
+@use '../Foundation/color' as c;
+@use '../Foundation/mixin' as m;
+
+.c-explanation {
+  & .c-btn-01 {
+    margin: 0 auto;
+    max-width: 480px;
+    width: 100%;
+    @include m.mq(sm) {
+    }
+    @include m.mq(md) {
+    }
+  }
+}
