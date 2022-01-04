@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% let meta = { title: '個別ページ', page: 'post'}; %> <%- include('./include/_head',{ head: meta }); %>
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- INCLUDE__HEADER -->
+      <%- include('./include/_header'); %>
+
+      <main class="l-drawerFrame">
+        <div class="l-drawerFrame__wrapper">
+        </div>
+        <span class="l-drawerFrame__square"></span>
+      </main>
+    </div>
+
+    <!-- INCLUDE__FOOTER -->
+    <%- include('./include/_footer'); %>
+    <!-- INCLUDE__FOOT -->
+    <%- include('./include/_foot'); %>
+  </body>
+</html>
