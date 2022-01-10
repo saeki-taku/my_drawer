@@ -3,36 +3,19 @@ $base_white: #ffffff;
 $base_gray: #505050;
 $base_green: green;
 $base_blue: blue;
-// 木目調(backgroundにて使用)
-$back_wood: linear-gradient(
-  90deg,
-  rgba(208, 147, 82, 0.6),
-  rgba(192, 134, 70, 0.6) 60%,
-  rgba(208, 147, 82, 0.6)
-),
-repeating-radial-gradient(
-  ellipse at 20% 500%,
-  #c08646,
-  #c08646 0.2%,
-  #d09352 0.6%,
-  #d09352 1%
-);
-$back_wood_thin: linear-gradient(
-  90deg,
-  rgba(208, 147, 82, 0.5),
-  rgba(192, 134, 70, 0.5) 10%,
-  rgba(208, 147, 82, 0.5)
-),
-repeating-radial-gradient(
-  ellipse at 30% 500%,
-  #c08646,
-  #c08646 0.2%,
-  #d09352 0.6%,
-  #d09352 1%
-);
+
+// 棚の背景・木目調(backgroundにて使用)
+$back_wood: linear-gradient(90deg, rgba(208, 147, 82, 0.6), rgba(192, 134, 70, 0.6) 60%, rgba(208, 147, 82, 0.6)),
+  repeating-radial-gradient(ellipse at 20% 500%, #c08646, #c08646 0.2%, #d09352 0.6%, #d09352 1%);
+
+$back_wood_thin: linear-gradient(60deg, rgba(212, 160, 103, 0.5) 20%, rgba(218, 162, 103, 0.5)),
+  repeating-radial-gradient(ellipse at 30% 500%, #ad8049, #ad8049 0.2%, #b8874b 0.6%, #b8874b 1%);
+;
+
+$back_wood_brown: linear-gradient(60deg, rgba(208, 147, 82, 0.5), rgba(192, 134, 70, 0.5) 10%, rgba(208, 147, 82, 0.5));
 
 // 引き出し(取っ手)
-$btn_grab: #00000080;
+$btn_grab: #00000050;
 // 引き出し(枠)
 $btn_frame: rgb(65, 65, 65);
 // 引き出し(影)

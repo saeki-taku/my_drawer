@@ -6,6 +6,11 @@
   color: c.$base_black;
 }
 
+// 空きの引き出しのボタン無効
+.preparation {
+  pointer-events: none;
+}
+
 .c-btn__inner {
   border-radius: 4px;
   overflow: hidden;
@@ -21,17 +26,16 @@
   grid-template-columns: 1fr 1fr;
   gap: 8px;
 
+  .footMenu & {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 4px;
+  }
+
   @include m.mq(sm) {
     gap: 15px;
   }
   @include m.mq(md) {
     grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-.c-btn-01__item {
-  &.Preparation {
-    pointer-events: none;
   }
 }
 
@@ -43,6 +47,10 @@
   position: relative;
   letter-spacing: 4px;
   box-shadow: c.$btn_shadow;
+
+  .footMenu & {
+    height: 40px;
+  }
 
   @include m.mq(sm) {
   }
@@ -88,10 +96,6 @@
         z-index: 3000;
       }
 
-      & .c-btn-01__inner {
-        // padding: 0px 0 12px;
-      }
-
       & .c-btn-01__text {
         top: 10px;
         padding: 5px 12px;
@@ -126,9 +130,19 @@
   background-color: c.$base_white;
   border: 1px solid;
   border-radius: 4px;
-  // transition: padding 0.2s;
   @include m.center(xy);
   position: relative;
+
+  .footMenu & {
+    width: calc(100% - 8px);
+    height: 30px;
+    padding: 2px;
+
+    &::after {
+      width: 9px;
+      height: 9px;
+    }
+  }
 
   //取っ手デザイン
   &::after {
@@ -159,6 +173,10 @@
   transition: top 0.3s, z-index 0.1s;
   z-index: 3000;
   width: calc(100% - 20px);
+
+  .footMenu & {
+    @include m.font_size_rem(14);
+  }
 
   @include m.mq(md) {
     width: calc(100% - 50px);
@@ -259,7 +277,6 @@
   }
 }
 
-
 // パターン_03
 .c-btn-03__list {
   display: grid;
@@ -271,12 +288,6 @@
   }
   @include m.mq(md) {
     grid-template-columns: 1fr 1fr 1fr;
-  }
-}
-
-.c-btn-03__item {
-  &.Preparation {
-    pointer-events: none;
   }
 }
 
@@ -391,8 +402,6 @@
   }
 }
 
-
-
 // パターン_04 (削除予定)
 .c-btn-04__list {
   display: grid;
@@ -432,7 +441,8 @@
     transition: opacity 0.3s ease-in-out, transform 0.2s 0.1s ease-in-out, border-left 0.2s, border-right 0.2s;
   }
 
-  &:hover {
+  &:hover,
+  &:focus {
     transform: scale(1.02) translateY(4px);
     z-index: 2000;
     &:before {

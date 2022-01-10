@@ -1,5 +1,12 @@
+@use '../Foundation/color' as c;
+@use '../Foundation/mixin' as m;
+
 .c-footer {
-  padding: 20px 0;
+  padding: 20px 0 70px;
+
+  @include m.mq(md) {
+    padding: 20px 0;
+  }
 }
 
 .c-footer__copyright {

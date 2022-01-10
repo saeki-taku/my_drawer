@@ -7,31 +7,17 @@
     <div class="wrapper">
       <!-- INCLUDE__HEADER -->
       <%- include('./include/_header'); %>
-      <!-- <div class="homeHero">
-        <img class="homeHero__photo" src="./images/top_01_1920.jpg" alt="トップの棚の画像" />
-        <h1 class="homeHero__logo">ここにロゴ画像が入る予定</h1>
-        <img class="homeHero__tate top" src="./images/tategaki_top_03.png" alt="" width="60px" height="auto" />
-        <img class="homeHero__tate bottom" src="./images/tategaki_bottom_03.png" alt="" width="60px" height="auto" />
-      </div> -->
 
       <main class="l-main">
         <div class="l-main__frame">
           <!-- BLOG-->
           <section class="c-section homeBlog">
-            <!--
-            <a class="homeBlog__new c-btn c-btn-01" href="">
-              <div class="c-btn-01__box">
-                <div class="c-btn__inner c-btn-01__inner"><span class="homeBlog__date">22.01.01</span>今年からReactを学んでいく話</div>
-              </div>
-            </a> -->
-
             <a class="c-btn c-btn-01" href="">
               <div class="c-btn-01__box">
                 <div class="c-btn-01__inner"></div>
               </div>
               <span class="c-btn-01__text"><span class="homeBlog__date">22.01.01</span>今年からReactを学んでいく話</span>
             </a>
-            <!-- 下部カテゴリーにブログがあるため不要 -->
           </section>
           <!-- CATEGORY_SECTION -->
           <section class="c-section homeCategory">
@@ -39,7 +25,7 @@
               <!-- js-openが付いたらアニメショーンするように！(テスト環境中は付与) -->
               <!-- <span class="c-title">カテゴリーから引き出す</span> -->
               <span class="c-title">
-                <img src="../images/title_category.png" alt="" width="210px" height="auto">
+                <img src="../images/title_category.png" alt="" width="210px" height="auto" />
               </span>
               <span class="c-title__line"></span>
               <span class="c-title__square">
@@ -49,7 +35,7 @@
               </span>
             </h2>
             <div class="c-container homeCategory">
-              <ul class="c-btn-01__list homeCategory_list main">
+              <ul class="c-btn-01__list homeCategory__list main">
                 <li class="c-btn-01__item">
                   <a class="c-btn c-btn-01" href="./post.html">
                     <div class="c-btn-01__box">
@@ -90,7 +76,7 @@
                     <span class="c-btn-01__text">プラグイン・フレームワーク</span>
                   </a>
                 </li>
-                <li class="c-btn-01__item Preparation">
+                <li class="c-btn-01__item preparation">
                   <a class="c-btn c-btn-01" href="">
                     <div class="c-btn-01__box">
                       <div class="c-btn-01__inner">
@@ -102,7 +88,7 @@
                 </li>
               </ul>
               <!-- ツールボックス・ブログ -->
-              <ul class="c-btn-01__list homeCategory_list sub">
+              <ul class="c-btn-01__list homeCategory__list sub">
                 <li class="c-btn-01__item">
                   <a class="c-btn c-btn-01" href="">
                     <div class="c-btn-01__box">
@@ -128,7 +114,7 @@
               <!-- js-openが付いたらアニメショーンするように！(テスト環境中は付与) -->
               <!-- <span class="c-title">よく使うもの</span> -->
               <span class="c-title">
-                <img src="../images/title_recommend.png" alt="" width="120px" height="auto">
+                <img src="../images/title_recommend.png" alt="" width="120px" height="auto" />
               </span>
               <span class="c-title__line"></span>
               <span class="c-title__square">
@@ -203,7 +189,7 @@
               <!-- js-openが付いたらアニメショーンするように！(テスト環境中は付与) -->
               <!-- <span class="c-title">タグから引き出す</span> -->
               <span class="c-title">
-                <img src="../images/title_tag.png" alt="" width="170px" height="auto">
+                <img src="../images/title_tag.png" alt="" width="170px" height="auto" />
               </span>
               <span class="c-title__line"></span>
               <span class="c-title__square">
@@ -251,7 +237,8 @@
           </section>
         </div>
       </main>
-
+      <!-- INCLUDE__FOOTMENU -->
+      <%- include('./include/_footMenu'); %>
       <!-- INCLUDE__FOOTER -->
       <%- include('./include/_footer'); %>
       <!-- INCLUDE__FOOT -->

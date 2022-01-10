@@ -1,0 +1,14 @@
+@use '../Foundation/color' as c;
+@use '../Foundation/mixin' as m;
+
+.c-footMenu__listWrap {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 5000;
+
+  @include m.mq(md) {
+    display: none;
+  }
+}

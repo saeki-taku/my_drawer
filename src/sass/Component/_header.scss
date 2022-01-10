@@ -1,0 +1,36 @@
+@use '../Foundation/color' as c;
+@use '../Foundation/mixin' as m;
+
+.c-header {
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+.c-header__listWrap {
+  padding: 30px;
+  border: 2px solid;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  display: none;
+
+  @include m.mq(md) {
+    display: block;
+  }
+}
+
+.c-header__logoLink {
+  display: block;
+  max-width: 380px;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+.c-header__logo {
+  width: 60%;
+
+  @include m.mq(md) {
+    width: 80%;
+  }
+}
