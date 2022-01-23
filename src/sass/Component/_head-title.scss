@@ -1,7 +1,7 @@
 @use '../Foundation/color' as c;
 @use '../Foundation/mixin' as m;
 
-.c-title__wrap {
+.c-headTitle__main {
   width: 100%;
   max-width: 420px;
   margin: 0 auto 40px;
@@ -9,16 +9,16 @@
   position: relative;
 
   &.js-open {
-    & .c-title {
+    & .c-headTitle {
       transform: translateY(0);
       opacity: 1;
     }
 
-    & .c-title__line {
+    & .c-headTitle__line {
       transform: translateX(-50%) scale(1);
     }
 
-    & .c-title__square {
+    & .c-headTitle__square {
       transform: translateY(0);
 
       &::before {
@@ -31,89 +31,122 @@
       }
     }
   }
-}
+  & .c-headTitle {
+    position: relative;
+    display: inline-block;
+    background-color: c.$base_white;
+    border-radius: 10px;
+    margin-bottom: 7px;
+    padding: 2px 4px;
+    @include m.font_size_rem(18);
+    z-index: 2000;
+    transition: opacity 0.7s 0.4s ease-in-out, transform 0.4s 0.4s;
+    transform: translateY(30px);
+    opacity: 0;
+    // background: c.$back_wood;
+  }
 
-.c-title {
-  position: relative;
-  display: inline-block;
-  background-color: c.$base_white;
-  border-radius: 10px;
-  margin-bottom: 7px;
-  padding: 2px 4px;
-  @include m.font_size_rem(18);
-  z-index: 2000;
-  transition: opacity 0.7s 0.4s ease-in-out, transform 0.4s 0.4s;
-  transform: translateY(30px);
-  opacity: 0;
-  // background: c.$back_wood;
-}
-
-.c-title__line {
-  width: 150%;
-  max-width: 350px;
-  height: 1px;
-  background-color: c.$base_black;
-  position: absolute;
-  top: 22px;
-  left: 50%;
-  transform: translateX(-50%) scale(0);
-  transition: transform 0.2s;
-}
-
-.c-title__square {
-  width: 100%;
-  max-width: 250px;
-  margin: 0 auto;
-  height: 34px;
-  border: 1px solid;
-  border-radius: 4px;
-  display: block;
-  position: relative;
-  transition: transform 0.2s;
-  transform: translateY(-20px);
-
-  &::before,
-  &::after {
-    content: '';
-    width: 1px;
-    height: 22px;
+  & .c-headTitle__line {
+    width: 150%;
+    max-width: 350px;
+    height: 1px;
     background-color: c.$base_black;
     position: absolute;
-    top: -21px;
+    top: 22px;
+    left: 50%;
+    transform: translateX(-50%) scale(0);
+    transition: transform 0.2s;
   }
 
-  &::before {
-    left: 9px;
-    transform-origin: top left;
-    transform: scale(0) rotate(22deg);
+  & .c-headTitle__square {
+    width: 100%;
+    max-width: 250px;
+    margin: 0 auto;
+    height: 34px;
+    border: 1px solid;
+    border-radius: 4px;
+    display: block;
+    position: relative;
+    transition: transform 0.2s;
+    transform: translateY(-20px);
+
+    &::before,
+    &::after {
+      content: '';
+      width: 1px;
+      height: 22px;
+      background-color: c.$base_black;
+      position: absolute;
+      top: -21px;
+    }
+
+    &::before {
+      left: 9px;
+      transform-origin: top left;
+      transform: scale(0) rotate(22deg);
+    }
+
+    &::after {
+      right: 9px;
+      transform-origin: top right;
+      transform: scale(0) rotate(-22deg);
+    }
+
+    @include m.mq(sm) {
+    }
+
+    @include m.mq(sm) {
+    }
   }
 
-  &::after {
-    right: 9px;
-    transform-origin: top right;
-    transform: scale(0) rotate(-22deg);
-  }
+  & .c-headTitle__square-inner {
+    width: calc(100% - 20px);
+    height: calc(100% - 12px);
+    border: 1px solid;
+    border-radius: 4px;
+    @include m.center(xy);
 
-  @include m.mq(sm) {
-  }
-
-  @include m.mq(sm) {
+    &::after {
+      content: '';
+      width: 10px;
+      height: 10px;
+      border: 1px solid;
+      border-radius: 50%;
+      @include m.center(xy);
+    }
   }
 }
 
-.c-title__square-inner {
-  width: calc(100% - 20px);
-  height: calc(100% - 12px);
-  border: 1px solid;
-  border-radius: 4px;
-  @include m.center(xy);
+.c-headTitle__sub {
+  min-height: 120px;
+  text-align: center;
+  position: relative;
+  padding-top: 10px;
+  margin-bottom: 30px;
 
-  &::after {
-    content: '';
-    width: 10px;
-    height: 10px;
-    border: 1px solid;
-    border-radius: 50%;
+  & .c-headTitle__icon {
+    width: 100%;
+    max-width: 120px;
+    height: auto;
+  }
+
+  & span {
+    letter-spacing: 4px;
+    padding: 2px 10px;
+    background-color: c.$base_white;
+    border-radius: 8px;
+    width: 100%;
     @include m.center(xy);
+  }
+
+  @include m.mq(md) {
+    padding-top: 30px;
+    margin-bottom: 40px;
+
+    & .c-headTitle__icon {
+      width: 100%;
+      max-width: 150px;
+      height: auto;
+    }
   }
 }

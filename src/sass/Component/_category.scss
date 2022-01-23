@@ -1,0 +1,25 @@
+@use '../Foundation/color' as c;
+@use '../Foundation/mixin' as m;
+
+.c-category {
+  & .c-btn-01__list {
+    &.main {
+      margin-bottom: 8px;
+    }
+
+    &.sub {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    @include m.mq(sm) {
+      &.main {
+        margin-bottom: 15px;
+      }
+
+      &.sub {
+      }
+    }
+  }
+}

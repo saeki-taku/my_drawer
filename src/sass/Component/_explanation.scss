@@ -2,6 +2,10 @@
 @use '../Foundation/mixin' as m;
 
 .c-explanation {
+  &.c-section {
+    margin: 0 auto;
+  }
+
   & .c-btn-01 {
     margin: 0 auto;
     max-width: 480px;

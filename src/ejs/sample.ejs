@@ -17,7 +17,8 @@
   <body>
     <div class="wrapper">
       <!-- INCLUDE__HEADER -->
-      <%- include('./include/_header'); %>
+      <% let page = { pages: 'sample'}; %>
+      <%- include('./include/_header', { header: page }); %>
 
       <main>
         <div class="mb_sm">

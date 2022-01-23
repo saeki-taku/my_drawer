@@ -4,9 +4,11 @@
 .c-footMenu__listWrap {
   position: fixed;
   bottom: 0;
-  left: 0;
-  width: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: c.$base_white;
   z-index: 5000;
+  width: calc(100% - 16px);
 
   @include m.mq(md) {
     display: none;

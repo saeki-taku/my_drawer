@@ -1,5 +1,12 @@
+@use '../Foundation/color' as c;
+@use '../Foundation/mixin' as m;
+
 .c-section {
   max-width: 1400px;
   width: 100%;
-  margin: 0 auto 40px;
+  margin: 0 auto 50px;
+
+  @include m.mq(md) {
+    margin: 0 auto 60px;
+  }
 }

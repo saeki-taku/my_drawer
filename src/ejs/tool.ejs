@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <% let meta = { title: 'ツールボックス', page: 'tool'}; %> <%- include('./include/_head',{ head: meta }); %>
+  </head>
+  <body>
+    <% let page = { title: 'ツールボックス', pages: 'tool'}; %>
+    <div class="wrapper">
+      <!-- INCLUDE__HEADER -->
+      <%- include('./include/_header', { header: page }); %>
+      <!-- INCLUDE__HEADTITLE -->
+      <%- include('./include/_headTitle' , { headTitle: page }); %>
+
+      <main class="">
+        <section class="c-section tool">
+          <button class="tool__select-wrap">
+            <select class="tool__select" name="" id="">
+              <option value="">ー&nbsp;選択&nbsp;ー</option>
+              <option value="">全て</option>
+              <option value="">素材</option>
+              <option value="">色・配色</option>
+              <option value="">ジェネレーター</option>
+              <option value="">ライブラリ・プラグイン</option>
+              <option value="">ライブラリ・プラグイン</option>
+              <option value="">コーディング</option>
+            </select>
+          </button>
+
+          <ul class="c-btn-03__list tool">
+            <li class="c-btn-03__item">
+              <a class="c-btn c-btn-03" href="./post.html">
+                <div class="c-btn-03__box"></div>
+                <span class="c-btn-03__text up">HTML</span>
+              </a>
+            </li>
+            <li class="c-btn-03__item">
+              <a class="c-btn c-btn-03" href="./post.html">
+                <div class="c-btn-03__box"></div>
+                <span class="c-btn-03__text up">HTML</span>
+              </a>
+            </li>
+            <li class="c-btn-03__item">
+              <a class="c-btn c-btn-03" href="">
+                <div class="c-btn-03__box"></div>
+                <span class="c-btn-03__text up">HTML</span>
+              </a>
+            </li>
+            <li class="c-btn-03__item">
+              <a class="c-btn c-btn-03" href="">
+                <div class="c-btn-03__box"></div>
+                <span class="c-btn-03__text up">HTML</span>
+              </a>
+            </li>
+            <li class="c-btn-03__item">
+              <a class="c-btn c-btn-03" href="">
+                <div class="c-btn-03__box"></div>
+                <span class="c-btn-03__text up">HTML</span>
+              </a>
+            </li>
+            <li class="c-btn-03__item">
+              <a class="c-btn c-btn-03" href="">
+                <div class="c-btn-03__box"></div>
+                <span class="c-btn-03__text up">HTML</span>
+              </a>
+            </li>
+            <li class="c-btn-03__item">
+              <a class="c-btn c-btn-03" href="">
+                <div class="c-btn-03__box"></div>
+                <span class="c-btn-03__text up">HTML</span>
+              </a>
+            </li>
+            <li class="c-btn-03__item">
+              <a class="c-btn c-btn-03" href="">
+                <div class="c-btn-03__box"></div>
+                <span class="c-btn-03__text up">HTML</span>
+              </a>
+            </li>
+            <li class="c-btn-03__item">
+              <a class="c-btn c-btn-03" href="">
+                <div class="c-btn-03__box"></div>
+                <span class="c-btn-03__text up">HTML</span>
+              </a>
+            </li>
+          </ul>
+        </section>
+
+        <!-- COMMON_MENU -->
+        <div class="l-menu">
+          <section class="c-section c-category"><%- include('./include/_category'); %></section>
+          <section class="c-section"><%- include('./include/_tag'); %></section>
+        </div>
+      </main>
+
+      <!-- INCLUDE__FOOTER -->
+      <%- include('./include/_footer'); %>
+      <!-- INCLUDE__FOOT -->
+      <%- include('./include/_foot'); %>
+    </div>
+  </body>
+</html>

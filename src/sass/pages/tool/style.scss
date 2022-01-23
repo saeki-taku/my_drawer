@@ -1,0 +1,41 @@
+@use '../../Foundation/color' as c;
+@use '../../Foundation/mixin' as m;
+
+.tool__select-wrap {
+  position: relative;
+  border: 4px double;
+  border-radius: 8px;
+  text-align: center;
+  margin: 0 auto 30px;
+  padding: 5px 20px;
+  padding: 5px 15px;
+  display: block;
+  width: 250px;
+  max-width: 100%;
+  transition: background-color .2s ease-in;
+
+  &::before {
+    content: '';
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 2px solid c.$btn_grab;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 20px;
+  }
+
+  @include m.mq(md) {
+    &:hover,
+    &:focus {
+      background-color: c.$base_gray_thin;
+    }
+  }
+}
+
+.tool__select {
+  width: 100%;
+  cursor: pointer;
+}

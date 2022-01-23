@@ -4,26 +4,39 @@
     <% let meta = { title: '個別ページ', page: 'post'}; %> <%- include('./include/_head',{ head: meta }); %>
   </head>
   <body>
+    <% let page = { title: '個別ページ', pages: 'post'}; %>
     <div class="wrapper">
       <!-- INCLUDE__HEADER -->
-      <%- include('./include/_header'); %>
+      <%- include('./include/_header', { header: page }); %>
+      <!-- INCLUDE__HEADTITLE -->
+      <%- include('./include/_headTitle', { headTitle: page }); %>
 
-      <main class="l-drawerFrame">
-        <div class="l-drawerFrame__wrapper">
-          <h1>h1タイトル</h1>
-          <h2>h2タイトル</h2>
-          <h3>h3タイトル</h3>
-          <h4>h4タイトル</h4>
-          <h5>h5タイトル</h5>
-          <p>本文が入ります。</p>
+      <main class="">
+        <article class="l-post">
+          <div class="l-post__wrapper">
+            <h1 class="c-post__title">サンプルタイトル</h1>
+            <div class="c-post__contents">
+              <h2>本文が入ります。</h2>
+              <h3>本文が入ります。</h3>
+              <h4>本文が入ります。</h4>
+              <h5>本文が入ります。</h5>
+              <p>本文が入ります。</p>
+            </div>
+          </div>
+        </article>
+
+        <div class="l-menu">
+          <!-- INCLUDE_CATEGORY -->
+          <section class="c-section c-category"><%- include('./include/_category'); %></section>
+          <!-- INCLUDE_TAG -->
+          <section class="c-section"><%- include('./include/_tag'); %></section>
         </div>
-        <span class="l-drawerFrame__square"></span>
       </main>
-    </div>
 
-    <!-- INCLUDE__FOOTER -->
-    <%- include('./include/_footer'); %>
-    <!-- INCLUDE__FOOT -->
-    <%- include('./include/_foot'); %>
+      <!-- INCLUDE__FOOTER -->
+      <%- include('./include/_footer'); %>
+      <!-- INCLUDE__FOOT -->
+      <%- include('./include/_foot'); %>
+    </div>
   </body>
 </html>

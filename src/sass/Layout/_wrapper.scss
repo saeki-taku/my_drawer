@@ -2,9 +2,9 @@
 @use '../Foundation/mixin' as m;
 
 .wrapper {
-  max-width: 1800px;
+  max-width: 1400px;
   width: 100%;
-  padding: 0 5px;
+  padding: 0 8px;
   border: 1px solid;
   border-radius: 4px;
 
@@ -14,5 +14,6 @@
     border: 2px solid;
     border-radius: 4px;
     margin: 5px auto;
+    padding: 0 30px;
   }
 }

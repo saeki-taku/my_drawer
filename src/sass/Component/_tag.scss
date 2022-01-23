@@ -1,0 +1,8 @@
+@use '../Foundation/color' as c;
+@use '../Foundation/mixin' as m;
+
+.c-tag {
+  &.c-section {
+    margin-bottom: 80px;
+  }
+}
